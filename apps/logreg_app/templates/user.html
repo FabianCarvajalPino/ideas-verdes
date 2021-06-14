@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/logreg_style.css' %}">
+</head>
+<body>
+    <nav class="d-flex justify-content-end navbar navbar-expand-lg navbar-light bg-light" style=" min-height: 70px;">
+        <a class="col-2 btn btn-primary m-1" href="/ideas_brillantes">Ideas brillantes</a>
+        <a class="col-1 btn btn-danger" href="/logout">Logout</a>
+    </nav>
+    <div class="wrapper">
+        <table class="table">
+            <tr>
+                <td>Nombre:</td>
+                <td>{{user_selected.name}}</td>
+            </tr>
+            <tr>
+                <td>Alias:</td>
+                <td>{{user_selected.alias}}</td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td>{{user_selected.email}}</td>
+            </tr>
+            <tr>
+                <td># de ideas posteadas:</td>
+                <td>{{ideas}}</td>
+            </tr>
+            <tr>
+                <td># de ideas que le gustan:</td>
+                <td>{{likes}}</td>
+            </tr>
+        </table>
+    </div>
+    {% include 'footer.html' %}
+</body>
+</html>

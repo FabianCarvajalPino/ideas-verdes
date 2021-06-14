@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/logreg_style.css' %}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="box-shadow: 5px 10px;">
+        <div class="container-fluid">
+            <img src="https://www.ideasverdes.es/wp-content/uploads/2014/08/Ideas-Verdes-Logoplano.png" alt="logo" width="90" height="60">
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="login_and_reg">Publicar mi idea!</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="wrapper p-4">
+        <section class="main-area d-flex justify-content-between ">
+            <div class="main-area-text">
+                <h1 style="color: #875d37;">Ideas Verdes</h1>
+                <p>My money's in that office, right? If she start giving me some bullshit about it ain't there, and we got to go someplace else and get it, I'm gonna shoot you in the head then and there. Then I'm gonna shoot that bitch in the kneecaps, find out where my goddamn money is. She gonna tell me too. Hey, look at me when I'm talking to you, motherfucker. You listen: we go in there, and that nigga Winston or anybody else is in there, you the first motherfucker to get shot. You understand?</p>    
+                <div class="d-flex justify-content-center">
+                    <img src="https://static.wixstatic.com/media/5d24fd_63f76fe6b227a28750b92007244cf98e.png/v1/fill/w_215,h_295,al_c,q_85,usm_0.66_1.00_0.01/5d24fd_63f76fe6b227a28750b92007244cf98e.webp" style="margin: auto;" alt="10 ideas">
+                </div>
+            </div>
+            <img src="https://labs.emprendeverde.es/wp-content/uploads/2019/09/gifconexio%CC%81n-europea_icono_fondo-verde.gif" alt="main gif" style="width: 600px;">
+        </section>
+        <section>
+            <br>
+            <div class="best-ideas d-flex justify-content-center">
+                <h2 style="color: #875d37;">Las 10 mejores ideas se repartiran 30 millones para prototipar</h2>
+            </div>
+            <br>
+            <div class="d-flex justify-content-center">
+                <a class="btn btn-success p-4" href="/login_and_reg">Puclicar mi idea!</a>
+            </div>
+
+        </section>
+    </div>
+    {% include 'footer.html' %}
+</body>
+</html>

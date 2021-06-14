@@ -1,0 +1,32 @@
+.test-class{
+    display: inline-block;
+}
+
+.form-wrapper > p{
+    display: flex;
+    flex-direction: row;
+}
+
+label{
+    width: 100px;
+}
+
+.wrapper{
+    width: 1200px;
+    margin: auto;
+    background-color: #c5e9b4;
+    min-height: 800px;"
+}
+
+.table{
+    margin: auto;
+    width: 500px;
+}
+
+body{
+    background-color: #c0987b;
+}
+
+.errorlist{
+    color: #ee5759;
+}

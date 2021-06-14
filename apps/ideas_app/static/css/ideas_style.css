@@ -1,0 +1,28 @@
+.wrapper{
+    background-color: #c5e9b4;
+    width: 1200px;
+    margin: 0px auto;
+    padding: 1%;
+    min-height: 800px;
+}
+
+body{
+    background-color: #c0987b;
+}
+
+.form-wrapper > input{
+    display: inline;
+    margin: 0px auto;
+}
+
+.ideas-table{
+    margin: auto;
+}
+
+#header{
+    background-color: #c0987b;
+}
+
+tr{
+    padding: 10px;
+}

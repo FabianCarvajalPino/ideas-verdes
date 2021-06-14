@@ -1,0 +1,16 @@
+{% block content %}
+    <form id="ideaForm" action="/ideas_brillantes" method="POST" class="form-wrapper">
+        {% csrf_token %}
+        
+        {% if idea_form.errors %}
+            {% for field in form %}
+                {% for error in field.errors %}
+                    {{field.label}}: {{ error|escape }}
+                {% endfor %}
+            {% endfor %}
+        {% endif %}
+        {{idea_form.idea}}
+
+        <input id="submit-btn" type="submit" class="btn btn-primary" value="Agregar idea">
+    </form>
+{% endblock %}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/ideas_style.css' %}">
+</head>
+<body style="background-color: #c0987b;">
+    <nav class="d-flex justify-content-end navbar navbar-expand-lg navbar-light bg-light" style=" min-height: 70px;">
+        <a class="col-2 btn btn-primary m-1" href="/ideas_brillantes">Ideas brillantes</a>
+        <a class="col-1 btn btn-danger" href="/logout">Logout</a>
+    </nav>
+    <div class="wrapper">
+        <table class="d-flex justify-content-center">
+            <tr>
+                <td class="align-baseline"><a href="/users/{{idea.owner.id}}">{{idea.owner.alias}}</a> dice:</td>
+                <td>
+                    <textarea readonly class="d-block" name="" id="" cols="60" rows="2">{{idea.idea}}</textarea>
+                </td>
+            </tr>
+        </table>
+        {% if count > 0 %}
+        <p style="text-align: center;">Personas a las que les gusta esta idea:</p>
+        <table class="table table-bordered table-striped table-hover" style="width: 500px; margin: auto;">
+            <tr>
+                <th>Alias</th>
+                <th>Nombre</th>
+            </tr>
+            {% for liker in idea.likes.all %}
+                <tr class="">
+                    <td><a href="/users/{{liker.id}}">{{liker.alias}}</a></td>
+                    <td>{{liker.name}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        {% endif %}
+    </div>
+    {% include 'footer.html' %}
+</body>
+</html>
